@@ -39,7 +39,7 @@ public class Producer {
 				jsonStr = obj.writeValueAsString(endSystems);
 				ProducerRecord<String, String> record = new ProducerRecord<>(TOPIC, jsonStr);
 				producer.send(record);
-				//Thread.sleep(50000);
+
 			} catch (JsonProcessingException e) {
 				throw new RuntimeException(e);
 			}

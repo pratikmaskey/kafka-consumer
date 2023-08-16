@@ -32,7 +32,7 @@ public class TopicConsumer {
 			System.out.println("Consumer1 Record Timestamp -"+Instant.ofEpochMilli(endSystems.getTimeStamp())+
 					"Now Time -"+ Instant.now()+"Record -"+ endSystems.toString());
 			Long millis = ChronoUnit.MILLIS.between(instant, Instant.now());
-			Long timeToWait = 4*60*1000 - millis;
+			Long timeToWait = 4*60*1000 - millis; //4 min delay
 			System.out.println("Consumer1 Thread="+ Thread.currentThread().getName()+"  is sleeping for "+ timeToWait + " and will resume.");
 			if(millis > 0 && millis < 4*60*1000)Thread.sleep(timeToWait);
 
@@ -59,7 +59,7 @@ public class TopicConsumer {
 			System.out.println("Consumer2 Record Timestamp -"+Instant.ofEpochMilli(endSystems.getTimeStamp())+
 					" Now Time -"+ Instant.now()+"Record -"+ endSystems.toString());
 			Long millis = ChronoUnit.MILLIS.between(instant, Instant.now());
-			Long timeToWait = 4*60*1000 - millis;
+			Long timeToWait = 4*60*1000 - millis; // 4 min delay
 			System.out.println("Consumer2 Thread="+ Thread.currentThread().getName()+"  is sleeping for "+ timeToWait + " and will resume.");
 			if(millis > 0 && millis < 4*60*1000)Thread.sleep(timeToWait);
 
@@ -86,7 +86,7 @@ public class TopicConsumer {
 			System.out.println("Consumer3 Record Timestamp -"+Instant.ofEpochMilli(endSystems.getTimeStamp())+
 					" Now Time -"+ Instant.now()+"Record -"+ endSystems.toString());
 			Long millis = ChronoUnit.MILLIS.between(instant, Instant.now());
-			Long timeToWait = 4*60*1000 - millis;
+			Long timeToWait = 4*60*1000 - millis; // 4 min delay
 			System.out.println("Consumer3 Thread="+ Thread.currentThread().getName()+"  is sleeping for "+ timeToWait + " and will resume.");
 			if(millis > 0 && millis < 4*60*1000)Thread.sleep(timeToWait);
 
